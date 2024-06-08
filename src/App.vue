@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router' 
 import OneD from './components/oneD.vue'
+import TwoD from './components/twoD.vue'
+// import ThreeD from './components/threeD.vue'
 import type { TabsPaneContext } from 'element-plus'
 
 const activeName = ref('first')
@@ -20,10 +21,11 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
           ><OneD
         /></el-tab-pane>
         <el-tab-pane label="Двумерное случайное блуждание на плоскости" name="second"
-          >Двумерное случайное блуждание на плоскости</el-tab-pane
+          ><TwoD
+        /></el-tab-pane
         >
-        <el-tab-pane label="Трехмерное случайное блуждание с графиком" name="third"
-          >sdfdsfdsfsdfd</el-tab-pane
+        <!-- <el-tab-pane label="Трехмерное случайное блуждание с графиком" name="third"
+          ><ThreeD/></el-tab-pane -->
         >
       </el-tabs>
     </div>
